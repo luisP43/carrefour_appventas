@@ -1,0 +1,36 @@
+/* Enter your custom styles here */
+._image{
+    width: 200px;
+    height: 150px;
+    padding: 10%;
+}
+._spacer{
+    background: #d3d1d1;
+    margin: 1.8% !important;
+}
+._vboxIn{
+    width: 100%;
+    height: 100%;
+    padding: 3%;
+}
+._description{
+    font-size: x-large;
+    padding-left: 5%;
+}
+._input{
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+}
+._table{
+    padding-left: 2%;
+    padding-right: 2%;
+}
+.sapMTB{
+    background: black;
+}
+._titleTable{
+   color: white; 
+}
+.sapMBarTitleAlignAuto .sapMBarPH {
+    justify-content: center;
+}

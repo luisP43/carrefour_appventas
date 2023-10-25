@@ -1,0 +1,73 @@
+<mvc:View 
+    xmlns:core="sap.ui.core" 
+    controllerName="carrefour.controlpedidos.controller.Home"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:t="sap.ui.table">
+    <Shell>
+        <Page id="page" title="{i18n>title}">
+            <content>
+                <VBox>
+                  <!-- Cabecera -->
+                     <HBox>
+                       <!--Imagen--> 
+                       <Image src="../images/carrefour_icon_pestana.png" class="_image"></Image>                     
+                       <!--Filtro-->
+                       <VBox class="_vboxIn">
+                          <ToolbarSpacer class="_spacer"></ToolbarSpacer>  
+                          <Label text="{i18n>title_filter}" class="_description"></Label>
+                          <SearchField class="_input" placeholder="{i18n>title_busqueda}" liveChange="onBuscarProducto" value="{modelFiltro>/nombreProducto}"></SearchField>
+                          <ToolbarSpacer class="_spacer"></ToolbarSpacer>                      
+                       </VBox>
+                     </HBox>
+                  <!--Cuerpo-->
+                  <t:Table
+                    id="table"
+                    rows="{/Products_by_Categories}"
+                    selectionMode="None"
+                    alternateRowColors="true"
+                    class="_table">
+                    <t:extension>
+                      <OverflowToolbar style="Clear">
+                        <core:Icon src="sap-icon://shipping-status" class="_titleTable"></core:Icon>
+                        <Title text="{i18n>title_table}" class="_titleTable"></Title>
+                      </OverflowToolbar>
+                    </t:extension>
+                    <t:columns>
+                      <t:Column>
+                         <Label text="{i18n>title_producto}"></Label>
+                         <t:template>
+                           <Text text="{ProductName}"></Text>
+                         </t:template>
+                      </t:Column>
+                      <t:Column>
+                        <Label text="{i18n>title_category}"/>
+                        <t:template>
+                          <Text text="{CategoryName}"/> 
+                        </t:template>
+                      </t:Column>
+                      <t:Column>
+                        <Label text="{i18n>title_precius}"/>
+                          <t:template>
+                            <Text text="{QuantityPerUnit}"/>                                                                 
+                          </t:template>
+                      </t:Column>
+                      <t:Column>
+                        <Label text="{i18n>title_stock}"/>
+                        <t:template>
+                            <Text text="{UnitsInStock}"/>                            
+                        </t:template>                              
+                      </t:Column>                   
+                      <t:Column>
+                          <Label text="{i18n>title_vigencia}"/>
+                          <t:template>
+                              <Text text="{Discontinued}"/>
+                          </t:template>
+                      </t:Column>            
+                    </t:columns>
+                  </t:Table>
+                </VBox>
+            </content>
+        </Page>
+    </Shell>  
+</mvc:View>
