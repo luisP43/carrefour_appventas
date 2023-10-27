@@ -4,5 +4,7 @@ Aplicaciones Fiori para el departamento de Ventas de la empresa Carrefour
 Dirigirse a la ruta de la carpeta de la aplicacion y ejecutar 
 - npm install
 # Deploy a CF 
-Dirigirse a la ruta de la carpeta del proyecto y ejecutar ==>
+Dirigirse a la ruta de la carpeta del proyecto y ejecutar
+- mbt build
+- cf deploy mta_(tab + tab) 
 
